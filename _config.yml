@@ -13,18 +13,17 @@ permalink: /:year/:month/:title/
 highlighter: rouge
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: red
+cover_color: blue 
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
-    description: Visit blog
+    title: 首页
+    description: 访问博客首页
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
-    - {title: archive, description: My archive, url: '/pages/archive'}
+    - {title: 归档, description: 访问文章归档页面, url: '/pages/archive'}
 # Pagination
 plugins: [jekyll-paginate]
 paginate: 10
