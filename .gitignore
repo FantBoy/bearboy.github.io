@@ -6,6 +6,8 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### _posts
+_posts/
 
 ### OSX ###
 .DS_Store
