@@ -24,9 +24,25 @@
 }
 
   .post-list__post-title {
-    margin-top: 0;
+    margin-top: 0.7em;
     margin-bottom: .2em;
     font-size: 2em;
+    line-height: 1.3em;
+
+    a {
+      color: $gray-darkest;
+
+      &:hover {
+        color: $hover-color;
+      }
+
+    }
+
+  }
+  .post-list__post-title_readmore {
+    margin-top: 0.7em;
+    margin-bottom: .2em;
+    font-size: 1.3em;
     line-height: 1.3em;
 
     a {
