@@ -242,9 +242,9 @@ td:last-child {
 .time,
 .author,
 .tags {
-  font-size: .8em;
-  color: darken($gray, 2%);
-
+  font-size: 1em;
+  //color: darken($gray, 2%);
+  color: $gray-dark;
   a {
     color: $gray-darker;
 
@@ -270,7 +270,7 @@ td:last-child {
   background-color: #FFF;
   padding-left: 20px;
   text-indent: 10px;
-  color: #999999;
+  color: $gray-dark;
 }
 
 .intro {
@@ -380,6 +380,24 @@ hr {
 .hidden {
   display: none !important;
 
+}
+
+//------------------------------
+// article page year title
+//------------------------------
+
+.article_year_title {
+  font-size: 1.2em;
+  text-indent: 4px;
+  border-radius: 4px;
+  padding: 6px 15px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background:#B9D3EE;
+  /*0px right, 5px botton, 5px fuzzy*/
+  box-shadow: 0px 5px 5px #9FB6CD;
+  border-left: 6px solid #1874CD;
+  position:relative;
 }
 
 
