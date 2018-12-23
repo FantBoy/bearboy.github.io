@@ -1,11 +1,11 @@
 # Basic
-title: Vno Jekyll
-subtitle: A blog-orientation theme for Jekyll
-welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
-creator: <a href="http://onev.cat">@onevcat</a>
+title: bearboyxu
+subtitle: 人生没有白走的路，每一步都算数... 
+welcome_message: <a href="https://github.com/FantBoy/bearboy.github.io" target="_blank">该站点基于vno二次开发，点击下载源码</a>
+description:  在devops的道路上，渐行渐远...
+creator: <a href="http://blog.bearboyxu.cn">@bearboyxu</a>
 
-url: "http://vno.onevcat.com"
+url: "http://blog.bearboyxu.cn"
 
 permalink: /:year/:month/:title/
 
@@ -26,7 +26,7 @@ nav:
     - {title: 归档, description: 访问文章归档页面, url: '/pages/archive'}
 # Pagination
 plugins: [jekyll-paginate]
-paginate: 10
+paginate: 6
 paginate_path: "page/:num/"
 
 # Comment
@@ -36,11 +36,11 @@ comment:
     
 # Social
 social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
-    gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    weibo: u/2042015811 
+    github: FantBoy
+    #twitter: bearboyxu
+
+    mail: bear@bearboyxu.cn
 
 # Google Analytics
 ga:
