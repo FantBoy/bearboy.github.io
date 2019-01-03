@@ -7,7 +7,7 @@ creator: <a href="http://blog.bearboyxu.cn">@bearboyxu</a>
 
 url: "http://blog.bearboyxu.cn"
 
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 
 # Format
 highlighter: rouge
