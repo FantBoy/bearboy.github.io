@@ -54,6 +54,7 @@ logging.error(msg, *args, **kwargs)
 > 原因很简单，因为`logging.DEBUG`等是真实存在的，只不错它并不是一个方法，而是一个常量
 
 ### Logging Levels
+
 |  Level   | Numeric value |
 | :------: | :-----------: |
 | CRITICAL |      50       |
