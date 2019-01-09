@@ -55,14 +55,20 @@ logging.error(msg, *args, **kwargs)
 
 ### Logging Levels
 
+logging对level有比较详细的划分：
+
+
+
 |  Level   | Numeric value |
-| :------: | :-----------: |
+| ------ | ----------- |
 | CRITICAL |      50       |
 |  ERROR   |      40       |
 | WARNING  |      30       |
 |   INFO   |      20       |
 |  DEBUG   |      10       |
 |  NOTSET  |       0       |
+
+
 
 ### 验证
 ```python
