@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 类的属性管理
+title: 高质量Python代码之类的属性管理
 date: 2017-11-18 15:18
 toc: true
 description: 编写高质量python代码之类的属性管理

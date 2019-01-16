@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ContextManager 上下文管理器的正确打开方式
+title: 高质量python代码之ContextManager上下文管理器
 date: '2017-05-20 14:46'
 description: 利用content manager构建上下文管理器
 feature: images/tag-plugins/python.jpg
@@ -8,7 +8,7 @@ toc: true
 tags:
   - ContextManager
 categories:
-  - Python
+  - 编写高质量python代码
 ---
 
 开发过程中，往往需要对一些处理过程进行异常处理，并且想要尽可能的保证整个过程被完整执行，且如果在过程中出现了异常，也能准备无误的恢复到执行前。python2.5之后的版本引入了with语句，来进行上下文管理(Context Manager)。with语句适用于对资源进行访问的场景，确保不管在执行过程中是否发生异常，都会执行必要的"清理"操作，释放资源。比如文件使用后自动关闭、线程中锁的自动获取和释放、数据库连接的创建和关闭以及销毁
@@ -258,4 +258,4 @@ class MySQLDbTool:
 
 ```
 
-[0]: https://docs.python.org/release/2.6/whatsnew/2.6.html?cm_mc_uid=41026434344714952813058&amp;amp;amp;amp;amp;amp;amp;amp;amp;cm_mc_sid_50200000=1495281305#module-contextlib
+[0]: https://docs.python.org/release/2.6/whatsnew/2.6.html?cm_mc_uid=41026434344714952813058&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cm_mc_sid_50200000=1495281305#module-contextlib

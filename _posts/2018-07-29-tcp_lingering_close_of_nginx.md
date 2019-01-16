@@ -6,9 +6,9 @@ datetime: 2018-07-29 17:11:29
 description: 
 comments: true
 tags:
- - nginx
+ - Nginx
 categories:
- - nginx
+ - Nginx
  
 ---
 
@@ -21,7 +21,7 @@ Nginx在设计连接关闭的相关特性的时候，引入了`lingering_close`�
 Nginx在接收客户端请求时，若因为客户端或者服务器端的异常问题，需要立即向客户端响应错误码信息。而当Nginx在返回错误码信息之后，大部分的场景都需要在返回后关闭tcp连接。
  - Nginx发送异常信息给客户端：`Write()`写数据到`write_buff`，待发送给客户端
  - Nginx调用`close()`关闭tcp连接
- 
+
 
 ### 连接关闭流程
 当Nginx直接调用`close()`关闭连接时，内核会首先检查tcp的`read_buff`里还有没有客户端发送过来的留在内核态没有被用户态进程读取的数据。如果有，则向客户端发送`RST`报文来关闭tcp连接，并丢弃`write_buff`里的数据。如果没有，则等待`write_buff`里的数据发送完毕后，再经过正常的4次分手报文断开tcp连接。
@@ -36,7 +36,7 @@ Nginx通过`lingering_close`设置来判断是否打开该特性。当Nginx关�
 `lingering_close`引入了两个超时时间来保证上述操作：
  - lingering_timeout：读超时时间。若服务器端在`lingering_timeout`内未收到客户端的数据，则关闭tcp连接的读，关闭连接。
  - lingering_time：总的读取时间。在服务端关闭tcp连接的写之后，保留socket的有效时间，在时间`lingering_time`的时间内，客户端需要将数据全部发送给服务端，否则，服务端会在`lingering_time`后关闭tcp连接。
- 
+
 
  
 

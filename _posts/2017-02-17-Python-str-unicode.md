@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python2之编码问题集锦
+title: 高质量python代码之Python2的编码问题
 date: 2017-02-17 19:35:11.000000000 +09:00
 updated: 2017-03-09 19:35:11.000000000 +09:00
 comments: true

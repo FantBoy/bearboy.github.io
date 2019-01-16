@@ -1,7 +1,7 @@
 ---
 layout: post
 filename: nginx-proxy_cache-ttl
-title: nginx之proxy_cache过期管理
+title: Nginx配置之proxy_cache过期管理
 datetime: 2018-10-16 00:09:13
 description: nginx之proxy_cache过期管理
 comments: true
@@ -28,10 +28,10 @@ proxy_cache缓存过期涉及三个变量：expired、inactive、proxy_cache_val
 
 - proxy_cache_valid：缓存的最大可用时间。在保证inactive内有访问的前提下，数据的过期时间
   >Sets caching time for different response codes. For example, the following directives
-**proxy_cache_valid 200 302 10m;
-proxy_cache_valid 404      1m;**
-set 10 minutes of caching for responses with codes 200 and 302, and 1 minute for responses with code 404.
-**expires**: Controls whether the response should be marked with an expiry time, and if so, what time that is.
+ *proxy_cache_valid 200 302 10m;
+ roxy_cache_valid 404      1m;**
+ et 10 minutes of caching for responses with codes 200 and 302, and 1 minute for responses with code 404.
+ *expires**: Controls whether the response should be marked with an expiry time, and if so, what time that is.
 
 
 

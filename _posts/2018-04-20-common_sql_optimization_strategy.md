@@ -7,7 +7,7 @@ description:
 
 comments: true
 tags:
- - MySQLdb优化
+ - MySQLdb
  
 categories:
  - MySQLdb

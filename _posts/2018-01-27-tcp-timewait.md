@@ -1,13 +1,13 @@
 ---
 layout: post
-title: TCP协议中三次握手和四次握手原理以及TIME_WAIT的真实意义
+title: TCP协议中建连和断连的基本原理及TIME_WAIT的真实意义
 date: '2018-01-02 14:46'
 description: TCP协议中三次握手和四次握手原理
 toc: true
 tags:
   - TCP
 categories:
-  - TCP/IP
+  - TCP
 ---
 
 最近遇到了大量TCP连接进入TIME_WAIT状态的情况。索性温习了一下TCP协议原理，从新整理了一下TCP通讯中的三次握手和四次握手流程，以及为什么主动断开连接的一方会进入2倍MSL时间的TIME_WAIT状？

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: python的类属性访问方法
+title: 高质量python代码之类属性的访问方法
 date: 2017-03-31 19:30:00
 updated: 2017-03-31 19:30:00
 comments: true

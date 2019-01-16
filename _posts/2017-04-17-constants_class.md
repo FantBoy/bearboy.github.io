@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 常量的管理类
+title: 高质量python代码之常量的管理类
 date: 2017-04-17 17:00:00 +09:00
 toc: true
 description: 编写高质量python代码之常量的管理类

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 多进程并行处理模型
+title: 基于python的多进程并行处理模型
 date: 2016-09-30 13:34:11.000000000 +09:00
 description: 利用concurrent实现简单的多进程并发,处理平时工作中常需要的大批量离线处理任务
 feature: images/tag-plugins/python.jpg
