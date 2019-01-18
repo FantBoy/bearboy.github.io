@@ -20,9 +20,7 @@ categories:
 
 ## 按照请求连接数进行流量控制
 
-Nginx提供了`ngx_http_limit_conn_module`模块，根据请求连接频率来进行流量控制。
-
-配置demo:
+Nginx提供了`ngx_http_limit_conn_module`模块，根据请求连接频率来进行流量控制。配置demo:
 
 ![](http://blog.bearboyxu.cn/images/posts/ngx_http_limit_module/limit_conn_zone.png)
 
@@ -31,9 +29,19 @@ Nginx提供了`ngx_http_limit_conn_module`模块，根据请求连接频率来�
 配置描述：
 
 | 配置项               | 配置描述                                                     |
-| -------------------- | ------------------------------------------------------------ |
-| limit_conn_zone      | 用来限流的KEY，及存放KEY对应信息的共享内存区域大小。KEY为`$binary_remote_addr`时，表示按照IP维度限制最大连接数；KEY为`$server_name`时，表示按照域名维度限制最大连接数。 |
+| :------------------- | :----------------------------------------------------------- |
+| limit_conn_zone      | 用来限流的KEY，及存放KEY对应信息的共享内存区域大小。KEY为`$binary_remote_addr`时，表示按照IP维度限制最大连接数；KEY为`$server_name`时，表示按照域名维度限制最大连接数。当zone设定的共享内存空间被耗尽后，Nginx服务器直接向用户返回503（默认返回码） |
 | limit_conn           | 对某个KEY对应的总的网络连接数进行限流，可以按照IP，也可以按照域名来做限制。当用户请求被Nginx处理过，且已经读取了整个用户请求的请求头，这个请求将会被计数。 |
 | limit_conn_log_level | 当请求被限流后的Nginx日志级别，默认为`error`级别             |
-| limit_conn_status    | 当请求被限流后，Nginx返回的相应状态码                        |
+| limit_conn_status    | 当请求被限流后，Nginx返回的相应状态码（默认为503）           |
+
+`limit_conn zone number`指定一块已经被设定的内存空间，以及每个键值（KEY）的最大连接数。当用户真实连接数超过了最大连接数number，Nginx直接向用户返回503（默认返回码）。
+
+
+
+> 当多个`limit_conn`在同一个配置块被配置时，所有的配置都生效
+
+
+
+## 按照请求数（频率）限流
 
