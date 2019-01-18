@@ -60,11 +60,11 @@ Nginx提供了`ngx_http_limit_req_module`模块，根据单个用户IP或者域�
 limit_req_zone [key] zone=[name]:[size] rate=[rate]
 ```
 
-| 配置项 | 配置项说明                                                   |
-| ------ | ------------------------------------------------------------ |
-| key    | 表示限制的关键字，可以是用户IP`$binary_remote_addr`,也可以是`$server_name`虚拟服务域名 |
-| zone   | name可以自定义，但是不能重复。它代表一个存储session状态的容器；size表示容器大小（按照64-byte一个session来计算，一共可以存储size/64-byte个session） |
-| rate   | 表示请求的频率限制。单位为`r/s`表示每秒的请求频率限制；`r/m`表示每分钟的请求频率限制 |
+| 配置 | 配置项说明                                                   |
+| :-------- | :------------------------------------------------------------ |
+|    key    | 表示限制的关键字，可以是用户IP`$binary_remote_addr`,也可以是`$server_name`虚拟服务域名 |
+|    zone   | name可以自定义，但是不能重复。它代表一个存储session状态的容器；size表示容器大小（按照64-byte一个session来计算，一共可以存储size/64-byte个session） |
+|    rate   | 表示请求的频率限制。单位为`r/s`表示每秒的请求频率限制；`r/m`表示每分钟的请求频率限制 |
 
 ```nginx
 #每个用户IP的请求频率，每秒不能超过1次，且最大存储容量为10M
