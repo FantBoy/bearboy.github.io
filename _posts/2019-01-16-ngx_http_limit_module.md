@@ -31,13 +31,20 @@ Nginx提供了`ngx_http_limit_conn_module`模块，根据请求连接频率来�
 
 `limit_conn zone number`指定一块已经被设定的内存空间，以及每个键值（KEY）的最大连接数。当用户真实连接数超过了最大连接数number，Nginx直接向用户返回503（默认返回码）。
 
-![](http://blog.bearboyxu.cn/images/posts/ngx_http_limit_module/limit_conn_zone.png)
+```Nginx
+limit_conn_zone $binary_remote_addr zone=perip:10m;
+limit_conn_zone $server_name zone=perserver:10m;
+
+server {
+    ...
+    limit_conn perip 10;
+    limit_conn perserver 100;
+}
+```
 
 
 
 > 当多个`limit_conn`在同一个配置块被配置时，所有的配置都生效
-
-
 
 
 
@@ -54,4 +61,15 @@ limit_req_zone [key] zone=[name]:[size] rate=[rate]
 | key    | 表示限制的关键字，可以是用户IP`$binary_remote_addr`,也可以是`$server_name`虚拟服务域名 |
 | zone   | name可以自定义，但是不能重复。它代表一个存储session状态的容器；size表示容器大小（按照64-byte一个session来计算，一共可以存储size/64-byte个session） |
 | rate   | 表示请求的频率限制。单位为`r/s`表示每秒的请求频率限制；`r/m`表示每分钟的请求频率限制 |
+
+```nginx
+limit_req_zone $binary_remote_addr zone=perip:10m rate=1r/s;
+limit_req_zone $server_name zone=perserver:10m rate=10r/s;
+
+server {
+    ...
+    limit_req zone=perip burst=5 nodelay;
+    limit_req zone=perserver burst=10;
+}
+```
 
