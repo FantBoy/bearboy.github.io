@@ -14,16 +14,13 @@ categories:
 
 
 
-在Nginx的高并发场景，往往需要对用户请求进行限频或者限流。以此来保护后台服务的稳定运行。Nginx已有的两个模块为限频和限流提供了支持：
-
-- ngx_http_limit_req_module: 请求限制模块
-- ngx_http_limit_conn_module: 流量限制模块
-
-同时，提供黑白名单的配置能力，根据用户的ip和黑名单列表做出相应的流量控制和请求限频。
+在Nginx的高并发场景，往往需要对用户请求进行限频或者限流。以此来保护后台服务的稳定运行。Nginx已有的两个模块为限频和限流提供了支持：`ngx_http_limit_req_module` 请求限制模块和`ngx_http_limit_conn_module` 流量限制模块。同时，提供黑白名单的配置能力，根据用户的ip和黑名单列表做出相应的流量控制和请求限频。
 
 
 
 ## 按照请求连接数进行流量控制
+
+![](http://blog.bearboyxu.cn/images/posts/ngx_http_limit_module/limit_conn_zone.png)
 
 #### limit_conn
 
