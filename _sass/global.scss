@@ -211,13 +211,13 @@ table {
   text-align: center;
   line-height: 40px;
   border-spacing: 0;
-  border: 2px solid darken($primary-color, 10%);
+  border: 2px solid darken($primary-color, 5%);
   width: 90%;
   margin: 50px auto;
 }
 
 thead tr:first-child {
-  background-color: darken($primary-color, 10%);
+  background-color: darken($primary-color, 5%);
   color: $gray-lightest;
   border: none;
 }
