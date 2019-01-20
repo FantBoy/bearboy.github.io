@@ -14,7 +14,7 @@ layout: default
     {{ content }}
   </section>
 </article>
-{% if page.needmore == null || page.needmore == true %}
+{% if page.needmore == null or page.needmore == true %}
   {% include read-more.html %}
 {% endif %}
 <!--{% include comments.html %}-->
