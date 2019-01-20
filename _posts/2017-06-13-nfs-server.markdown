@@ -12,7 +12,7 @@ categories:
 > NFS 是Network File System的缩写，即网络文件系统。一种使用于分散式文件系统的协定。NFS 的基本原则是“容许不同的客户端及服务端通过一组RPC分享相同的文件系统”，它是独立于操作系统，容许不同硬件及操作系统的系统共同进行文件的分享，它的文件传送或信息传送过程依赖于RPC协议。
 
 <!--more-->
-# NFS服务安装
+##NFS服务安装
 
 nfs服务通过yum执行安装
 ```shell
@@ -36,7 +36,7 @@ Nothing to do
 nfs-utils在安装的同时，rpcbind程序也会随着安装
 **linux系统基本上都会默认安装nfs-utils服务和rpcbind程序，两者的安装包在系统的安装盘里都能找到**
 
-## 安装检测
+### 安装检测
 
 ```shell
 [# /home/user_00]# rpm -qa |grep nfs
@@ -46,19 +46,19 @@ nfs-utils-1.2.3-16.tl1.x86_64
 rpcbind-0.2.0-8.el6.x86_64
 ```
 
-# NFS服务器
+## NFS服务器
 
-## NFS服务器系统的守护进程
+### NFS服务器系统的守护进程
 
  - nfsd：它是基本的NFS守护进程，主要功能是管理客户端是否能够登录服务器；
  - mountd：它是RPC安装守护进程，主要功能是管理NFS的文件系统。当客户端顺利通过nfsd登录NFS服务器后，在使用NFS服务所提供的文件前，还必须通过文件使用权限的验证。它会读取NFS的配置文件/etc/exports来对比客户端权限。
  - portmap：主要功能是进行端口映射工作。当客户端尝试连接并使用RPC服务器提供的服务（如NFS服务）时，portmap会将所管理的与服务对应的端口提供给客户端，从而使客户可以通过该端口向服务器请求服务。
 
-## 服务器配置
+### 服务器配置
 
 NFS服务器根据不同的功能区分了不同的配置文件，相对简单
 
-### 配置文件目录
+#### 配置文件目录
 
 NFS服务器配置的常用目录：
 
@@ -72,7 +72,7 @@ NFS服务器配置的常用目录：
 
 其中，`/etc/exports` 是NFS服务的主要配置文件，该配置文件在系统中不存在默认值，所以该文件可能并不存在，在第一次启动服务之前，需要手动创建。
 
-### exports配置文件的文件内容格式
+#### exports配置文件的文件内容格式
 
 ```Shell
 <输出目录> [客户端1 选项（访问权限,用户映射,其他）] [客户端2 选项（访问权限,用户映射,其他）]
@@ -116,7 +116,7 @@ NFS服务器配置的常用目录：
 |  subtree   |   若输出目录是一个子目录，则nfs服务器将检查其父目录的权限(默认设置)    |
 | no_subtree | 即使输出目录是一个子目录，nfs服务器也不检查其父目录的权限，这样可以提高效率  |
 
-### 共享目录开放匿名访问权限
+#### 共享目录开放匿名访问权限
 当客户端机器访问共享目录时，希望获取NFS服务端机器的某一用户权限，可以采用匿名访问的方式。
 
 在服务器上创建用户组nfsanon和用户nfsanon，并将用户nfsanon添加到用户组nfsanon中。
@@ -131,7 +131,7 @@ NFS服务器配置的常用目录：
 uid=0(root) gid=0(root) groups=45(nfsanon),0(root)
 ```
 
-## NFS服务的启动与停止
+### NFS服务的启动与停止
 
 在`/etc/exports`配置文件进行了正确的配置之后，就可以正常启动NFS服务了。
 
@@ -140,7 +140,7 @@ systemctl start  nfs.service
 systemctl start  rpcbing.service
 ```
 
-### 查询NFS服务状态
+#### 查询NFS服务状态
 
 nfs服务状态
 ```Shell
@@ -174,7 +174,7 @@ Jun 13 19:30:48 systemd[1]: Starting RPC bind service...
 Jun 13 19:30:48 systemd[1]: Started RPC bind service.
 ```
 
-### 查看NFS服务开启的端口信息
+#### 查看NFS服务开启的端口信息
 ```Shell
 [nextradio_csg/audio/pgc_audio]# netstat -tunlp | grep 2049
 tcp        0      0 0.0.0.0:2049            0.0.0.0:*               LISTEN      -                   
@@ -243,23 +243,23 @@ rpc [option][IP|hostname]
     100021    4   tcp  28791  nlockmgr
 ```
 
-### 停止NFS服务
+#### 停止NFS服务
 只需要停止NFS服务即可，rpcbing服务可以不用停止
 ```
 service nfs stop
 ```
 
-### 设置NFS服务器的自动启动状态
+#### 设置NFS服务器的自动启动状态
 ```
 **待补充**
 ```
 
-# NFS客户端设置
+## NFS客户端设置
 NFS客户端的设置分两类：手动挂载NFS服务器的共享目录、设置开机自启动挂载NFS共享目录
 
-## 手动挂载NFS服务器的共享目录
+### 手动挂载NFS服务器的共享目录
 
-### 首先通过showmount指令查看NFS服务器的状态
+#### 首先通过showmount指令查看NFS服务器的状态
 
 ```Shell
 [cfs_files_migrate-1.0/bin]# showmount -e 192.168.1.123
@@ -269,7 +269,7 @@ Export list for 192.168.1.123:
 
 从结果可以看出，NFS服务器向 `192.168.1.222` 共享了 `/nextradio_csg` 目录。
 
-### 在客户端机器挂载共享目录
+#### 在客户端机器挂载共享目录
 ```Shell
 [cfs_files_migrate-1.0/bin]# mkdir /nextradio_csg
 [cfs_files_migrate-1.0/bin]# mount -t nfs 192.168.1.123:/nextradio_csg /nextradio_csg
@@ -285,15 +285,15 @@ tmpfs                   17G    25k    17G   1% /dev/shm
 
 通过 `df -H` 查看挂载结果。发现已经过了一块大小为2.2T的磁盘，命名为`nextradio_csg`
 
-## 设置开机自启动挂载NFS共享目录
+### 设置开机自启动挂载NFS共享目录
 
 ```
 **待补充**
 ```
 
-# NFS的常用命令
+## NFS的常用命令
 下面来介绍两个经常用到的查看命令
-## showmount
+### showmount
 ```Shell
  格式：showmount [option] [IP|hostname]
         option:
@@ -301,7 +301,7 @@ tmpfs                   17G    25k    17G   1% /dev/shm
             -e：显示某台主机的/etc/exports所共享的目录信息。
 ```
 
-## exportfs
+### exportfs
 ```Shell
 格式：exportfs [option]
   option:
@@ -311,7 +311,7 @@ tmpfs                   17G    25k    17G   1% /dev/shm
             -v：将命令输出显示到屏幕。
 ```
 
-### 重新挂载一次 exports,不重启
+#### 重新挂载一次 exports,不重启
 ```
 [nextradio_csg/audio/pgc_audio]# exportfs -arv
 exporting 192.168.1.223:/nextradio_csg
@@ -319,7 +319,7 @@ exporting 192.168.1.224:/nextradio_csg
 exporting 192.168.1.225:/nextradio_csg
 ```
 
-### 将已共享的NFS目录资源，全部卸载
+#### 将已共享的NFS目录资源，全部卸载
 ```
 [nextradio_csg/audio/pgc_audio]# exportfs -auv
 ```
