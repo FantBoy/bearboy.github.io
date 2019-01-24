@@ -152,6 +152,8 @@ limit_req zone=mylimit burst=20
 
 如果用户在100ms内并发了21条请求，Nginx会将第一个请求直接发送给上游服务处理，将后续的20个请求做缓存处理，放入队列中，然后每100ms（根据`rate`计算的最小处理周期）处理一个请求。当有新请求进来时，如果队列已经装满，则直接返回503（默认）。
 
+![](/images/posts/ngx_http_limit_module/req_limit_delay.png)
+
 ### 对缓存的请求做不延迟的处理
 
 如上面所描述，配置`burst`参数，将会使用户请求更流畅，能够有效的应对突然的请求激增。但是超过请求频率的请求会被延迟处理，从一定程度上增加了用户请求响应时延。
@@ -165,6 +167,8 @@ limit_req zone=[name] burst=[count] nodelay
 ```
 
 当一个请求到达时（已经超过了请求频率限制的场景），只要队列中还有空闲的位置可以分配。Nginx会立即处理该请求，同时在队列中为该请求分配一个位置，并置为`taken（占据）`。被占据的位置不会被释放给其他请求，直到一段时间被释放后才能被其他请求复用（根据`rate=10r/s`计算释放时间为100ms）。
+
+![](/images/posts/ngx_http_limit_module/req_limit_nodelay.png)
 
 > 大部分场景下，建议将`burst`和`nodelay`配置项结合使用。
 
