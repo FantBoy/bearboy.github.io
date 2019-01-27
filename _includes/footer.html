@@ -5,3 +5,21 @@
         <span class="footer__copyright">本站{% if site.creator %}由 {{site.creator}} 于{{ site.time | date: "%F" }}基于<a href="https://jekyllrb.com">Jekyll</a>生成，{% endif %}采用 <a href="https://github.com/FantBoy/bearboy.github.io">B-Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/FantBoy/bearboy.github.io">本站源码</a> - &copy; {{site.time | date: "%Y"}}</span>
     </footer>
 </section>
+
+<script src="/plugins/fancybox/lib/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script>
+        // 给图片添加链接
+        $(document).ready(function() {
+            $("p img").each(function() {
+                var strA = "<a id='yourid' href='" + this.src + "'></a>";
+                $(this).wrapAll(strA);
+            });
+        });
+    
+        // fancybox
+        $("#yourid").fancybox({
+                                  openEffect    : 'elastic',
+                                  closeEffect   : 'elastic',
+                              });
+    </script>
