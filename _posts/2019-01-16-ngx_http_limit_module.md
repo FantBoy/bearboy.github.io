@@ -207,3 +207,18 @@ location / {
 
 在location中添加`deny all`指令即可实现，对指定location的请求，全部拒绝。
 
+## 用户下载速度限制
+限制用户下载速度为128k
+```nginx
+location /download { 
+    limit_rate 128k; 
+} 
+```
+限制请求数据大小超过一定范围时，限速(大于10M后再以128kb/s限速)
+```nginx
+location /download { 
+    limit_rate_after 10m; 
+    limit_rate 128k; 
+ }  
+```
+
