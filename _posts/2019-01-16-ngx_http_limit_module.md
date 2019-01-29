@@ -141,7 +141,7 @@ limit_req_log_level info|notice|warn|error
 
 ## 如何处理大量的突发请求
 
-nginx处理大量突发请求，取决于`burst`配置。burst定义了请求数在超过`zone`定义的请求速率的情况下，服务器将超过部分请求缓存，延迟处理。最大的请求缓存数极为`burst`值。当缓存的请求数超过了`burst`值，则不延迟，直接向用户返回503错误码（默认503）。
+nginx处理大量突发请求，取决于`burst`配置。burst定义了请求数在超过`zone`定义的请求速率的情况下，服务器将超过部分请求缓存，延迟处理。最大的请求缓存数即为`burst`值。当缓存的请求数超过了`burst`值，则不延迟，直接向用户返回503错误码（默认503）。
 
 以下配置为例：
 
@@ -174,7 +174,7 @@ limit_req zone=[name] burst=[count] nodelay
 
 ## 不限流白名单配置
 
-Nginx提供`gro`指令配置针对用户请求的黑白名单配置。demo如下所示：
+Nginx提供`geo`指令配置针对用户请求的黑白名单配置。demo如下所示：
 
 ```nginx
 geo $whiteIpList {
