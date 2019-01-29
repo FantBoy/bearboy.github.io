@@ -6,9 +6,9 @@ datetime: 2018-07-11 00:27:56
 description: 
 comments: true
 tags:
- - nginx
+ - Nginx
 categories:
- - nginx
+ - Nginx
  
 ---
 
