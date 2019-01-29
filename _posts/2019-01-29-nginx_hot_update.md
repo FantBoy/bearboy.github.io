@@ -34,15 +34,12 @@ Nginx默认工作在多进程模式下，即主进程（master process）启动�
  - QUIT：等待工作进程处理完当前请求后退出
  - USR1：重新打开股务中的所有文件
 
-### `nginx -s signal`支持的信号
+### nginx -s signal支持的信号
  - stop：等价于TERM，INT
  - quit：QUIT
  - reopen：USR1
  - reload：HUP
 
-```shell
-kill -HUP $(cat logs/nginx.pid)
-```
 
 ## reload的工作流程
 
@@ -54,6 +51,12 @@ kill -HUP $(cat logs/nginx.pid)
     2. 第1步若成功，则使用新的配置，新建worker工作进程。新建成功后发送一个`QUIT`给旧的worker进程，要求旧的进程优雅的退出。
     3. 第一步若失败，则回滚操作，还是使用旧的工作进程。
     4. 旧的进程在收到`QUIT`信号时，会继续服务于正在处理的请求，当所有请求在旧进程都被处理完成后，旧进程优雅的关闭。
+
+
+```shell
+kill -HUP $(cat logs/nginx.pid)
+```
+
 
 ## 热升级步骤
 当Nginx二进制文件或增删改模块时，需要进行热升级操作，因为reload已经不能满足该场景。
