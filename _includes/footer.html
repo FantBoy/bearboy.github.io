@@ -15,15 +15,17 @@
                 var strA = "<a id='yourid' href='" + this.src + "'></a>";
                 $(this).wrapAll(strA);
             });
-            $("li img").each(function() {
-                var strA = "<a id='yourid' href='" + this.src + "'></a>";
-                $(this).wrapAll(strA);
-            });
         });
     
         // fancybox
         $("#yourid").fancybox({
                                   openEffect    : 'elastic',
                                   closeEffect   : 'elastic',
+                                  helpers: {
+                                        overlay: {
+                                        locked: false
+                                        }
+                                    },
+
                               });
     </script>

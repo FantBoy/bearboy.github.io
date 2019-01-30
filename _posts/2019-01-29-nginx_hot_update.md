@@ -72,5 +72,7 @@ kill -HUP $(cat logs/nginx.pid)
    ![执行WINCH后](/images/posts/nginx_hot_update/winch.png)
 
 5. 检查新的工作进程的工作状态，查看服务服务是否OK。若新工作进程服务OK，则通过`KILL`将老的Master主进程杀死，完成热升级。若需要回滚操作，则向原Master主进程发送`HUP`信号，它会使用旧版配置重新拉起工作进程。然后再将新的Master主进程和Worker工作进程组杀死（QUIT或KILL），实现回滚。
+   
    ![kill旧的主进程](/images/posts/nginx_hot_update/kill.png)
+
 > 在切换过程当中，Nginx会将旧的`.pid`文件重命令为`.pid.oldbin`文件。并在旧进程退出后删除。
