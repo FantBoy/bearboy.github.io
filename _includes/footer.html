@@ -12,7 +12,7 @@
         // 给图片添加链接
         $(document).ready(function() {
             $("p img").each(function() {
-                var strA = "<a id='yourid' href='" + this.src + "'></a>";
+                var strA = "<a id='yourid' href='" + this.src + "' ></a>";
                 $(this).wrapAll(strA);
             });
         });
@@ -21,7 +21,7 @@
         $("#yourid").fancybox({
                                   openEffect    : 'elastic',
                                   closeEffect   : 'elastic',
-                                  helpers: {
+                                  helpers: {//解决弹窗后页面回到顶部的问题
                                         overlay: {
                                         locked: false
                                         }
