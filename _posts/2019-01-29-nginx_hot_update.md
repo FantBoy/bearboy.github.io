@@ -63,10 +63,14 @@ kill -HUP $(cat logs/nginx.pid)
 1. 备份二进制文件：nginx和*.so。
 2. 编译新版本的nginx和so。
 3. 向Master主进程发送`USR2`信号。Nginx主进程Master Process会以新配置、新文件启动新的主进程和工作进程组。新老进程组一起为用户提供服务。
+   
    ![执行热升级前](/images/posts/nginx_hot_update/before_usr2.png)
+   
    ![执行USR2后](/images/posts/nginx_hot_update/end_usr2.png)
 4. 向原Master主进程发送`WINCH`信号，它会让原Master主进程逐步关闭原工作进程组（请求处理完成后优雅退出）。这时，新的用户请求全部交由新的工作进程服务（老的Master主进程还存在）。
+   
    ![执行WINCH后](/images/posts/nginx_hot_update/winch.png)
+
 5. 检查新的工作进程的工作状态，查看服务服务是否OK。若新工作进程服务OK，则通过`KILL`将老的Master主进程杀死，完成热升级。若需要回滚操作，则向原Master主进程发送`HUP`信号，它会使用旧版配置重新拉起工作进程。然后再将新的Master主进程和Worker工作进程组杀死（QUIT或KILL），实现回滚。
    ![kill旧的主进程](/images/posts/nginx_hot_update/kill.png)
 > 在切换过程当中，Nginx会将旧的`.pid`文件重命令为`.pid.oldbin`文件。并在旧进程退出后删除。
