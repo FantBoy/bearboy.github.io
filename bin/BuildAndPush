@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /home/bearboyxu/MyBlogFactory/bearboy.github.io/
+
+bundle exec jekyll build && rm -rf /usr/share/nginx/blog_site/* && cp -rf _site/* /usr/share/nginx/blog_site/
