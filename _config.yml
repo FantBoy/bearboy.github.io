@@ -23,7 +23,8 @@ blog_button:
 # Navigation buttons in the front page.
 nav:
     # - {title: Another Button, description: A button, url: 'http://example.com'}
-    - {title: 归档, description: 访问文章归档页面, url: '/pages/archive'}
+    - {title: 归档, target_blank: false, description: 访问文章归档页面, url: '/pages/archive'}
+    - {title: WIKI, target_blank: true, description: 访问我的wiki站点, url: 'http://wiki.bearboyxu.cn'}
 # Pagination
 plugins: [jekyll-paginate]
 paginate: 10
