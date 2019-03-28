@@ -32,7 +32,7 @@ categories:
 
 获取wav音频数据，每16位读取一次带符号数作为一次采样点的采样结果。
 
-![](C:\Users\Bearboy\Desktop\raw_spectrum.png)
+![](/images/posts/compare_wav/raw_spectrum.png)
 
 
 
@@ -55,7 +55,7 @@ $$
 
 归一化后的结果如下:
 
-![](C:\Users\Bearboy\Desktop\Raw Spectrum(normalization).png)
+![](/images/posts/compare_wav/Raw_Spectrum(normalization).png)
 
 
 
@@ -76,7 +76,7 @@ $$
 其中x(n)为原始音频数据序列，y(n)为通过滤波器预加重后的数据序列，u为预加重系数。它的范围可取在0.9-1.0之间。这里根据音频处理方向公开的经验取 u=0.9375。
 滤波后的效果如下：
 
-![](C:\Users\Bearboy\Desktop\Wave_Filtering.png)
+![](/images/posts/compare_wav/Wave_Filtering.png)
 
 
 
@@ -123,7 +123,7 @@ $$
 
 一般情况下，选取a=0.46，效果图如下：
 
-![](C:\Users\Bearboy\Desktop\Wave_Filtering2.png)
+![](/images/posts/compare_wav/Wave_Filtering2.png)
 
 加上hamming窗之后，窗内中间的数据会体现出来，两侧的数据信息会丢失，所以在做卷积时，每次只会移动1/3或者1/2个窗，这样被前一帧丢失的数据又重新得到了体现。
 
@@ -163,13 +163,13 @@ def get_generate_hamming_windows(row, column):
 
 如上所示，音频的短时能量分布可以用于进行有声/无声的判断。如上图所示，妲己的原声，在末尾有很长一段静音片段，这一个片段对于我们不仅没有意义，还会干扰我们的判断，所以在做相似度判断之前，需要先去掉这部分数据	
 
-![](C:\Users\Bearboy\Desktop\Wave_Filtering1-1.png)
+![](/images/posts/compare_wav/Wave_Filtering1-1.png)
 
 这里，选择能量值低于0.025的采样点，认为是静音。然后通过这个阈值对音频首位进行扫描，去除首尾的静音片段，得到妲己原声的真正的有效的短时能量分布：
 
 
 
-![](C:\Users\Bearboy\Desktop\Useful_Short_Time_Energy.png)
+![](/images/posts/compare_wav/Useful_Short_Time_Energy.png)
 
 
 
