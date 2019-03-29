@@ -29,7 +29,7 @@ nav:
 plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: "page/:num/"
-
+excerpt_separator:  '<!-- more -->'
 # Comment
 #comment:
 #    disqus: vno-jekyll
