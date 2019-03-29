@@ -23,33 +23,33 @@ categories:
 
 | 运算符号 | Latex公式 | 运算符号 | Latex公式 |
 | :--------: | :----------: | ---------- | ---------- |
-|   $\geq$   |   `$\geq$`   |   $\coprod$   |   `$\coprod$`   |
-|   $\leq$   |   `$\leq$`   |   $\sum$   |   `$\sum$`   |
-|    $\sim$    |    `$\sim$`    | $\prod$ | `$\prod$` |
-|  $\backsim$  |  `$\backsim$`  | $\not\supset$ | `$\not\supset$` |
-|    $\bot$    |    `$\bot$`    | $\subset$ | `$\subset$` |
-|     $\pm$    |   `$\pm$`    | $\supset$ | `$\supset$` |
-|     $\cdot$     |   `$\cdot$`    | $\in$ | `$\in$` |
-|   $\times$     |  `$\times$`  |  $\notin$  |  `$\notin$`  |
-| $\ast$ | `$\ast$` | $\subseteq$ | `$\subseteq$` |
-|    $\div$     |   `$\div$`   |   $\supseteq$   |   `$\supseteq$`   |
-| $\not=$ | `$\not=$` |   $\bigcap$   |   `$\bigcap$`   |
-| $\approx$ | `$\approx$` | $\bigcup$ | `$\bigcup$` |
-| $\not<$| `$\not<$` | $\bigvee$ | `$\bigvee$` |
-|    $\mid$    |    `$\mid$`    | $\bigvee$ | `$\bigvee$` |
-| $\log$ | `$\log$` | $\bigwedge$ | `$\bigwedge$` |
-| $\log_2{18}$ | `$\log_2{18}$` | $\hat{y}$ | `$\hat{y}$` |
-| $\ln$ | `$\ln$` | $\check{y}$ | `$\check{y}$` |
-|    $\lg$     |    `$\lg$`     | $\breve{y}$ | `$\breve{y}$` |
-| $\angle$ | `$\angle$` | $\ll$ | `$\ll$` |
-| $30^\circ$ |`$30^\circ$` |$\gg$ |`$\gg$` |
-| $\sin$ | `$\sin$` | $\lim$ | `$\lim$` |
-| $\cos$ | `$\cos$` | $\infty$ | `$\infty$` |
-| $\tan$ | `$\tan$` | $\nabla$ | `$\nabla$` |
-| $\cot$ | `$\cot$` | $\oint$ | `$\oint$` |
-| $\csc$ | `$\csc$` | $\prime$ | `$\prime$` |
-| $\sec$ | `$\sec$` | $\bigodot$ | `$\bigodot$` |
-| $\bigotimes$ | `$\bigotimes$` | $\bigoplus$ | `$\bigoplus$` |
+|   $$\geq$$   |   `$\geq$`   |   $$\coprod$$   |   `$\coprod$`   |
+|   $$\leq$$   |   `$\leq$`   |   $$\sum$$   |   `$\sum$`   |
+|    $$\sim$$    |    `$\sim$`    | $$\prod$$ | `$\prod$` |
+|  $$\backsim$$  |  `$\backsim$`  | $$\not\supset$$ | `$\not\supset$` |
+|    $$\bot$$    |    `$\bot$`    | $$\subset$$ | `$\subset$` |
+|     $$\pm$$    |   `$\pm$`    | $$\supset$$ | `$\supset$` |
+|     $$\cdot$$     |   `$\cdot$`    | $$\in$$ | `$\in$` |
+|   $$\times$$     |  `$\times$`  |  $$\notin$$  |  `$\notin$`  |
+| $$\ast$$ | `$\ast$` | $$\subseteq$$ | `$\subseteq$` |
+|    $$\div$$     |   `$\div$`   |   $$\supseteq$$   |   `$\supseteq$`   |
+| $$\not=$$ | `$\not=$` |   $$\bigcap$$   |   `$\bigcap$`   |
+| $$\approx$$ | `$\approx$` | $$\bigcup$$ | `$\bigcup$` |
+| $$\not<$$| `$\not<$` | $$\bigvee$$ | `$\bigvee$` |
+|    $$\mid$$    |    `$\mid$`    | $$\bigvee$$ | `$\bigvee$` |
+| $$\log$$ | `$\log$` | $$\bigwedge$$ | `$\bigwedge$` |
+| $$\log_2{18}$$ | `$\log_2{18}$` | $$\hat{y}$$ | `$\hat{y}$` |
+| $$\ln$$ | `$\ln$` | $$\check{y}$$ | `$\check{y}$` |
+|    $$\lg$$     |    `$\lg$`     | $$\breve{y}$$ | `$\breve{y}$` |
+| $$\angle$$ | `$\angle$` | $$\ll$$ | `$\ll$` |
+| $$30^\circ$$ |`$30^\circ$` |$$\gg$$ |`$\gg$` |
+| $$\sin$$ | `$\sin$` | $$\lim$$ | `$\lim$` |
+| $$\cos$$ | `$\cos$` | $$\infty$$ | `$\infty$` |
+| $$\tan$$ | `$\tan$` | $$\nabla$$ | `$\nabla$` |
+| $$\cot$$ | `$\cot$` | $$\oint$$ | `$\oint$` |
+| $$\csc$$ | `$\csc$` | $$\prime$$ | `$\prime$` |
+| $$\sec$$ | `$\sec$` | $$\bigodot$$ | `$\bigodot$` |
+| $$\bigotimes$$ | `$\bigotimes$` | $$\bigoplus$$ | `$\bigoplus$` |
 
 
 
@@ -59,19 +59,19 @@ categories:
 
 | 名称 | 符号 | 数学表达式 | Latex公式 |
 | :----: | :--: | :----------: | :------------: |
-| 上标 | `^`  | $a^b$ | `$a^b$` |
-| 下标 | `_` | $a_b$ | `$a_b$` |
-| 分数 | `\frac` | $\frac{1 + a}{b + c}$ | `$\frac{1 + a}{b + c}$` |
+| 上标 | `^`  | $$a^b$$ | `$a^b$` |
+| 下标 | `_` | $$a_b$$ | `$a_b$` |
+| 分数 | `\frac` | $$\frac{1 + a}{b + c}$$ | `$\frac{1 + a}{b + c}$` |
 | 求和 | `\sum` | $$\sum{2x^n}$$ | `$\sum{2x^n}$` |
-| 带范围求和 | `\sum_{ }^{ }` | $\sum_{n=1}^N$ | `$\sum_{n=1}^N$` |
-| 累乘 | `\prod_{ }^{ }` | $\prod_{n=1}^{N}{2x^n}$ | `$\prod_{n=1}^{N}{2x^n}$` |
-| 开方 | `\sqrt[ ]{ }` | $\sqrt[2]{100}$ | `$\sqrt[2]{100}$` |
-| 积分 | `\int_{ }^{ }` | $\int^5_1{f(x)}{\rm d}x$ | `$\int^5_1{f(x)}{\rm d}x$` |
-| 二重积分 | `\iint_{ }^{ }` | $\iint^5_1{f(x)}{\rm d}x$ | `$\iint^5_1{f(x)}{\rm d}x$` |
-| 三重积分 | `\iiint_{ }^{ }` | $\iiint^5_1{f(x)}{\rm d}x$ | `$\iiint^5_1{f(x)}{\rm d}x$` |
-| 正无穷 | `$\infty$` | $+\infty$ | `$+\infty$` |
-| 正无穷 | `$\infty$` | $-\infty$ | `$-\infty$` |
-| 极限 |      | $\lim_{n\rightarrow+\infty} n$ | `$\lim_{n\rightarrow+\infty} n$` |
+| 带范围求和 | `\sum_{ }^{ }` | $$\sum_{n=1}^N$$ | `$\sum_{n=1}^N$` |
+| 累乘 | `\prod_{ }^{ }` | $$\prod_{n=1}^{N}{2x^n}$$ | `$\prod_{n=1}^{N}{2x^n}$` |
+| 开方 | `\sqrt[ ]{ }` | $$\sqrt[2]{100}$$ | `$\sqrt[2]{100}$` |
+| 积分 | `\int_{ }^{ }` | $$\int^5_1{f(x)}{\rm d}x$$ | `$\int^5_1{f(x)}{\rm d}x$` |
+| 二重积分 | `\iint_{ }^{ }` | $$\iint^5_1{f(x)}{\rm d}x$$ | `$\iint^5_1{f(x)}{\rm d}x$` |
+| 三重积分 | `\iiint_{ }^{ }` | $$\iiint^5_1{f(x)}{\rm d}x$$ | `$\iiint^5_1{f(x)}{\rm d}x$` |
+| 正无穷 | `$\infty$` | $$+\infty$$ | `$+\infty$` |
+| 正无穷 | `$\infty$` | $$-\infty$$ | `$-\infty$` |
+| 极限 |      | $$\lim_{n\rightarrow+\infty} n$$ | `$\lim_{n\rightarrow+\infty} n$` |
 
 
 
@@ -80,20 +80,20 @@ categories:
 
 | 箭头符号       | Latex公式                        |
 | :--------------: | :-----------------------------------------: |
-| $\uparrow$     | `$\uparrow$`                               |
-| $\downarrow$   | `$\downarrow$`                             |
-| $\Uparrow$     | `$\Uparrow$`                               |
-| $\Downarrow$   | `$\Downarrow$`                             |
-|$\rightarrow$            | `$\rightarrow$`                            |
-|$\leftarrow$             | `$\leftarrow$`                             |
-| $\Rightarrow$             | `$\Rightarrow$`                            |
-| $\Leftarrow$             | `$\Leftarrow$`                             |
-| $\longrightarrow$             | `$\longrightarrow$`                        |
-| $\longleftarrow$             | `$\longleftarrow$`                         |
-| $\Longrightarrow$             | `$\Longrightarrow$`                        |
-| $\Longleftarrow$             | `$\Longleftarrow$`                         |
-|$f: {\mathbf x_t} \mapsto {\mathbf y_t}$ | `$f: {\mathbf x_t} \mapsto {\mathbf y_t}$` |
-| $\Longleftrightarrow$          | `\Longleftrightarrow`                      |
+| $$\uparrow$$     | `$\uparrow$`                               |
+| $$\downarrow$$   | `$\downarrow$`                             |
+| $$\Uparrow$$     | `$\Uparrow$`                               |
+| $$\Downarrow$$   | `$\Downarrow$`                             |
+|$$\rightarrow$$            | `$\rightarrow$`                            |
+|$$\leftarrow$$             | `$\leftarrow$`                             |
+| $$\Rightarrow$$            | `$\Rightarrow$`                            |
+| $$\Leftarrow$$             | `$\Leftarrow$`                             |
+| $$\longrightarrow$$             | `$\longrightarrow$`                        |
+| $$\longleftarrow$$             | `$\longleftarrow$`                         |
+| $$\Longrightarrow$$             | `$\Longrightarrow$`                        |
+| $$\Longleftarrow$$             | `$\Longleftarrow$`                         |
+|$$f: {\mathbf x_t} \mapsto {\mathbf y_t}$$ | `$f: {\mathbf x_t} \mapsto {\mathbf y_t}$` |
+| $$\Longleftrightarrow$$          | `\Longleftrightarrow`                      |
 
 
 
@@ -195,14 +195,14 @@ $$
 
 | Latex公式   | 说明       | 显示实例 |
 | :-------------: | :----------: | :--------: |
-| `\rm`         | 罗马体     | $\rm{A}$     |
-| `\cal`        | 花体       | $\cal{B}$       |
-| `\it`         | 意大利体   | $\it{C}$      |
-| `\Bbb`        | 黑板粗体   | $\Bbb{D}$       |
-| `\bf`         | 粗体       | $\bf{E}$      |
-| `\mit`        | 数学斜体   | $\mit{F}$      |
-| `\sf`         | 等线体     | $\sf{G}$       |
-| `\scr`        | 手写体     | $\scr{H}$       |
-| `\tt`         | 打字机体   | $\tt{M}$      |
-| `\frak`       | 旧德式字体 | $\frak{N}$       |
-| `\boldsymbol` | 黑体       | $\boldsymbol{X, x}$   |
+| `\rm`         | 罗马体     | $$\rm{A}$$     |
+| `\cal`        | 花体       | $$\cal{B}$$       |
+| `\it`         | 意大利体   | $$\it{C}$$      |
+| `\Bbb`        | 黑板粗体   | $$\Bbb{D}$$       |
+| `\bf`         | 粗体       | $$\bf{E}$$      |
+| `\mit`        | 数学斜体   | $$\mit{F}$$      |
+| `\sf`         | 等线体     | $$\sf{G}$$       |
+| `\scr`        | 手写体     | $$\scr{H}$$       |
+| `\tt`         | 打字机体   | $$\tt{M}$$      |
+| `\frak`       | 旧德式字体 | $$\frak{N}$$       |
+| `\boldsymbol` | 黑体       | $$\boldsymbol{X, x}$$   |
