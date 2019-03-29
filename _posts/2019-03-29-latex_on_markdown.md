@@ -10,7 +10,9 @@ categories:
  - Markdown
 ---
 
+> markdown中Latex数学公式语法梳理。
 
+<!-- more -->
 
 ## 插入公式的方法
 
@@ -91,7 +93,7 @@ categories:
 | $$\longrightarrow$$             | `$\longrightarrow$`                        |
 | $$\longleftarrow$$             | `$\longleftarrow$`                         |
 | $$\Longrightarrow$$             | `$\Longrightarrow$`                        |
-| $$\Longleftarrow$$             | `$\Longleftarrow$`                         |
+| $$\Longleftarrow$$            | `$\Longleftarrow$`                         |
 |$$f: {\mathbf x_t} \mapsto {\mathbf y_t}$$ | `$f: {\mathbf x_t} \mapsto {\mathbf y_t}$` |
 | $$\Longleftrightarrow$$          | `\Longleftrightarrow`                      |
 
@@ -175,14 +177,15 @@ $$
 > 使用 `\vec{矢量}`可以产生一个矢量。也可以使用 `\overrightarrow`命令自定义字母上方的符号。
 
 **实例1：**`$$\vec{a} \cdot \vec{b}=0$$`
+
+
 $$
 \vec{a} \cdot \vec{b}=0
 $$
 
 
 
-实例2：**`$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$`
-
+**实例2：**`$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$`
 $$
 \overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}
 $$
@@ -199,7 +202,7 @@ $$
 | `\cal`        | 花体       | $$\cal{B}$$       |
 | `\it`         | 意大利体   | $$\it{C}$$      |
 | `\Bbb`        | 黑板粗体   | $$\Bbb{D}$$       |
-| `\bf`         | 粗体       | $$\bf{E}$$      |
+| `\bf`         | 粗体       | $$\bf{E}$$     |
 | `\mit`        | 数学斜体   | $$\mit{F}$$      |
 | `\sf`         | 等线体     | $$\sf{G}$$       |
 | `\scr`        | 手写体     | $$\scr{H}$$       |
