@@ -42,13 +42,16 @@ Mac下的终端美化，一直想做，但是没有找到合适的方法，最�
     `pip install powerline-status`
 
 5. 安装字体库
+
     从[https://github.com/powerline/fonts](https://github.com/powerline/fonts)克隆所有字体，执行`./install.sh`默认将所有字体安装到`/Users/Bear/Library/Fonts`目录下
 
 6. 设置iTerm2的字体
+
     安装字体库后，将iTerm2的`Regular Font`和`Non-ASCII Font`的字体都设置成 Powerline的字体
     ![](/images/posts/macos_iterm2_style/iTerm2_font.png)
 
 7. 安装并使用agnoster主题
+
     从[https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor](https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor)克隆agnoster主题，执行`./install`会将主题安装到`~/.oh-my-zsh/themes`下
 
     修改`~/.zshrc`中的`ZSH_THEME`配置项为`agnoster`
@@ -90,6 +93,7 @@ Mac下的终端美化，一直想做，但是没有找到合适的方法，最�
     ![](/images/posts/macos_iterm2_style/iTerm2_autosuggestions.png)
 
 10. 设置背景图
+
      使用SuperDanny提供的图片作为我的背景图。[下载地址](http://wx1.sinaimg.cn/large/81f8a509gy1fnjdvkkwgoj20zk0m8ak8.jpg)
 
      > 更换背景图片方式：iTerm2 -> Preferences -> Profiles -> Window -> BackGround Image选择图片
